@@ -6,7 +6,7 @@ import (
 )
 
 // GetBroadcastIPs identifies broadcast addresses on a given host ignoring
-// local interfaces
+// local interfaces.It can return only IPV4 or IPV4 and IPV6 addresses
 func GetBroadcastIPs(includeIPV6 bool) ([]net.IP, error) {
 	addrs, err := net.InterfaceAddrs()
 	var bcastAddrs []net.IP
