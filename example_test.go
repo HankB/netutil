@@ -14,6 +14,7 @@ func TestNetUtil(t *testing.T) {
 		t.Fail()
 	}
 	if len(bcast) < 2 {
+		fmt.Println("less than 2 broadcast addresses found", len(bcast))
 		t.Fail()
 	}
 	fmt.Println(err, bcast)
@@ -23,8 +24,8 @@ func TestNetUtil(t *testing.T) {
 	if err != nil {
 		t.Fail()
 	}
-	if len(bcast) != 1 {
-		fmt.Println("len(bcast) != 1 is", len(bcast))
+	if len(bcast) < 1 {
+		fmt.Println("No IPV4 broadcast address found", len(bcast))
 		t.Fail()
 	}
 	fmt.Println(err, bcast)
