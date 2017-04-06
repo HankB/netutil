@@ -24,7 +24,7 @@ func TestNetUtil(t *testing.T) {
 		t.Fail()
 	}
 	if len(bcast) != 1 {
-		fmt.Println("len(bcast)")
+		fmt.Println("len(bcast) != 1 is", len(bcast))
 		t.Fail()
 	}
 	fmt.Println(err, bcast)
